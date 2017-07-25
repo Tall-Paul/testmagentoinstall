@@ -1,0 +1,19 @@
+{
+    "require": {
+        "wikimedia/composer-merge-plugin": "dev-master"
+    },
+    "extra": {
+        "merge-plugin": {
+            "include": [
+                "magentocomposer/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": true,
+            "merge-extra-deep": false,
+            "merge-scripts": true
+        }
+    }
+}

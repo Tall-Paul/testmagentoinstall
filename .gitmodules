@@ -1,0 +1,3 @@
+[submodule "magentocomposer"]
+	path = magentocomposer
+	url = git@github.com:Tall-Paul/magentocomposer.git
