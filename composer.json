@@ -1,19 +1,8 @@
 {
     "require": {
-        "wikimedia/composer-merge-plugin": "dev-master"
-    },
-    "extra": {
-        "merge-plugin": {
-            "include": [
-                "magentocomposer/composer.json"
-            ],
-            "recurse": true,
-            "replace": false,
-            "ignore-duplicates": false,
-            "merge-dev": true,
-            "merge-extra": true,
-            "merge-extra-deep": false,
-            "merge-scripts": true
-        }
+        "aoepeople/aoe_scheduler" : "dev-master",
+        "connect20/balketechnologies_storemaintenance" : "0.3.3",
+        "obukhow/adaptive-resize" : "dev-master"
     }
+
 }
