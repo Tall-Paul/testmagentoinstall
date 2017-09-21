@@ -2,7 +2,9 @@
 This project can be used as a base for a build and deployment system for magento.
 
 after cloning initialise the composer and docker submodules
+
   git submodule init
+  
   git submodule update
 
 You can add 3rd party 'composerized' modules in composer.json.
@@ -12,18 +14,21 @@ your custom, non composer code goes in src (use magento file layout, so src/app/
 rebuild.sh runs a new build using your local files (runs composer install, pulls in magento files etc)
 
 run a docker test/development environment:
+
     put your database dump in /magentodocker/import
+    
     cd magentodocker && docker-compose up
 
 deploy to servers defined in 'configs' (deploy.sh)
 
   your server web root needs to look like:
-  /webroot/
-  /webroot/config/
-  /webroot/config/local.xml (magento local.xml config settings)
-  /webroot/releases/
-  /webroot/static/
-  /webroot/static/media/ (magento media folder)
+  
+ - /webroot/
+ - /webroot/config/
+ - /webroot/config/local.xml (magento local.xml config settings)
+ - /webroot/releases/
+ - /webroot/static/
+ - /webroot/static/media/ (magento media folder)
 
   the deployment script (deploy.sh) first checks out a branch into /deployment, builds it, deploys it to a subfolder of 'releases', then symlinks that into htdocs
 
